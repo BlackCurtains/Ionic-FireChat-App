@@ -1,0 +1,50 @@
+<ion-view view-title="Login">
+	<ion-content>
+		<div class="card">
+			<form name="myForm" novalidate>
+			<div class="list list-inset">
+			  <label class="item item-input">
+			    <input type="email" placeholder="Email" ng-model="user.email" required>
+			  </label>
+			  <label class="item item-input">
+			    <input type="Password" placeholder="Password" ng-model="user.password" required>
+			  </label>
+			  <label class="item item-input">
+			   <button class="button button-block button-royal" ng-click="login()">Login</button>
+			  </label>
+			  <label class="item item-input">
+			   <button class="button button-block button-calm" ng-click="openModal()">Register</button>
+			  </label>
+			</div>
+			</form>
+		</div>
+	</ion-content>
+	<script id="register.html" type="text/ng-template">
+	  <ion-modal-view>
+	    <ion-header-bar class="nav-bar bar-calm">
+	      <h1 class="title">Register</h1>
+	      <button class="button button-calm" ng-click="closeModal()">Close</button>
+	    </ion-header-bar>
+	    <ion-content>
+		    <div class="card">
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <input type="Email" placeholder="Email" ng-model="user.email">
+				  </label>
+				  <label class="item item-input">
+				    <input type="Password" placeholder="Password" ng-model="user.password">
+				  </label>
+				  <label class="item item-input">
+				    <input type="Password" placeholder="Password Again" ng-model="password_again">
+				  </label>
+				  <label class="item item-input">
+				   <button class="button button-block button-royal" ng-click="register()">Register</button>
+				  </label>
+				</div>
+			</div>
+	    </ion-content>
+	  </ion-modal-view>
+	</script>
+</ion-view>
+
+
